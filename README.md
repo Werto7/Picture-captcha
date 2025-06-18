@@ -17,6 +17,17 @@ If you want to insert your logo on the loading page, replace <code>[Base64 code]
 <h3>📁 Usage</h3>
 
 <ul>
-  <li>Place at least <strong>seven</strong> image parts (as <code>.jpg</code>) in the <code>captchas/false_parts</code> folder.</li>
-  <li>Place at least <strong>seven</strong> original full images (as <code>.jpg</code>) in the <code>captchas/originals</code> folder.</li>
+  <li>Place at least <strong>seven</strong> image parts (as <code>.jpg</code>) in the <code>captchas/false_parts</code> folder.</li>
+  <li>Place at least <strong>seven</strong> original full images (as <code>.jpg</code>) in the <code>captchas/originals</code> folder.</li>
+  <li>To activate the captcha, insert the following code at the beginning of your protected pages:</li>
 </ul>
+
+<pre>
+&lt;?php
+session_start();
+if (!isset($_SESSION['captcha_passed']) || $_SESSION['captcha_passed'] !== true) {
+    require_once 'captcha.php';
+    exit;
+}
+?&gt;
+</pre>
