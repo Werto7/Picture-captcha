@@ -1,10 +1,22 @@
-Captcha
+<h2>🧩 Captcha</h2>
 
-To solve the captcha, you have to select four image parts that do not match the main image.
+<p>
+To solve the captcha, you have to select <strong>four image parts</strong> that do <em>not match</em> the main image.
+</p>
 
-If you want to insert your logo in the loading page, you have to replace here “[Base64 code]” with the Base64 code of your .png image:
+<p>
+If you want to insert your logo on the loading page, replace <code>[Base64 code]</code> with the Base64 code of your <code>.png</code> image here:
+</p>
 
+<pre>
 &lt;img src="data:image/png;base64,[Base64 code]" alt="Forum-Logo" class="splash-logo"&gt;
+</pre>
 
-Usage:
-Place a few image parts (at least seven recommended) in the captchas/false_parts folder, each as .jpg. And in the captchas/originals folder, place a few normal images (at least seven recommended), also each as .jpg.
+<hr>
+
+<h3>📁 Usage</h3>
+
+<ul>
+  <li>Place at least <strong>seven</strong> image parts (as <code>.jpg</code>) in the <code>captchas/false_parts</code> folder.</li>
+  <li>Place at least <strong>seven</strong> original full images (as <code>.jpg</code>) in the <code>captchas/originals</code> folder.</li>
+</ul>
